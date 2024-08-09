@@ -23,19 +23,21 @@ nav {
     -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     transition: .2s;
-    z-index: 999;
+    z-index: 1;
 }
 
 nav.sticky {
     background-color: #000000;
     transition: 2s;
     z-index: 999;
-    height: 70px;
+    height: 50px;
+    z-index: 1;
 }
 
 .header__Index {
     position: sticky;
     top: 0px;
+    z-index: 999;
 }
 
 .cajaNav {
@@ -48,12 +50,30 @@ nav.sticky {
 
     font-size: 1.2rem;
 }
+.cajaNavFooter {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 
+    margin-right: 40px;
+    gap: 35px;
+
+    font-size: 1.2rem;
+}
 .a__nav {
     text-decoration: none;
     color: rgb(146, 146, 146);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
+    z-index: 999;
+
+}
+.a__navFooter {
+    text-decoration: none;
+    color: rgb(146, 146, 146);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    z-index: 999;
 
 }
 
@@ -369,8 +389,7 @@ textarea {
     width: 650px;
     height: 500px;
     background-clip: red;
-
-
+    z-index: -1;
 }
 
 .container {
@@ -379,6 +398,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .row {
@@ -457,15 +477,20 @@ footer {
     height: 2px;
 }
 
+
+/* MEDIA 1200PX */
+
 @media (max-width: 1200px) {
     .cajaServicios {
         flex-direction: column;
     }
-
+    .cajaParrafo__servicios {
+        padding-top: 105px;
+    }
     .section__servicios {
         height: 2500px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
         align-content: center;
@@ -482,14 +507,49 @@ footer {
         width: 200px;
         height: 200px;
     }
+    .imgServiciosPack {
+        height: 200px;
+        width: 350px;
+    }
 }
 
-@media (max-width: 2130px) {
-    /* .cajaServicios {
+@media (max-width: 1850px) {
+    .cajaServicios {
+        gap: 18px;
+    }
+    .imgServicios {
+        width: 220px;
+        height: 280px;
+    }
+    .cajatarjeta__Servicios {
+        width: 260px;
+    }
+    .imgServiciosPack {
+        height: 200px;
+        width: 250px;
+    }
+    
+}
+
+@media (max-width: 460px) {
+    .input-container {
+        width: 350px;
+    }
+    .spanContacto {
+        font-size: 2.5rem;
+        margin-top: 50px;
+    }    
+    .cajaNavFooter {
         flex-direction: column;
     }
-    .section__servicios {
-        height: 1600px;
-    } */
+    .cajaNav {
+        margin-right: 0px;
+    }
+    .a__navFooter {
+        font-size: 1rem;
     
+    }
+    .spanSection__index {
+        overflow: hidden;
+    }
 }
